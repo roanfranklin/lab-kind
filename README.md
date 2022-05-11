@@ -8,13 +8,38 @@ Iniciar o KUBERNETES na sua máquina para testes!
 
 - docker
 - kind
+- kubectl
 
 2. Configurações:
 
 - 4 GB memória RAM
 - 2 Nucleos ( Processador )
 
+### Install Docker
+
+UBUNTU ( Debian )
+
+```bash
+sudo apt update
+sudo apt install docker.io
+``` 
+
+Fedora ( Red Hat )
+
+```bash
+sudo dnf update
+sudo dnf install docker
+```
+
+MANJARO ( ArchLinux )
+
+```bash
+sudo pacman -Syu
+sudo pacman -S docker
+```
+
 ### Install KIND
+
 1. Baixar
 2. Permissão de Execução
 3. Move para diretório de execução local do sistema
@@ -23,6 +48,18 @@ Iniciar o KUBERNETES na sua máquina para testes!
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.12.0/kind-linux-amd64
 chmod +x ./kind
 sudo mv ./kind /usr/local/sbin/
+```
+
+### Install kubectl
+
+1. Baixar
+2. Permissão de Execução
+3. Move para diretório de execução local do sistema
+
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/sbin/
 ```
 
 ### Manifesto de criação do Cluster:
