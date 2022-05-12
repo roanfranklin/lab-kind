@@ -9,6 +9,7 @@ Iniciar o KUBERNETES na sua máquina para testes!
 - docker
 - kind
 - kubectl
+- helm
 
 2. Configurações:
 
@@ -91,6 +92,14 @@ nodes:
 
 ```bash
 kind create cluster --name mycluster --config mycluster.yaml
+```
+
+### Instalar HELM
+
+```bash
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
 ```
 
 ### Deletar o Cluster K8S
